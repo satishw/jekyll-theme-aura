@@ -27,7 +27,7 @@ header_menu__settings:
         title: 'UI Elements'
     - url: '/about/'
       title: 'About'
-    - url: 'https://satishw.github.io/jekyll-theme-aura-pro'
+    - url: 'https://satishw.github.io/jekyll-theme-aura-pro/features'
       title: 'Aura Pro'
 
 # Footer 
