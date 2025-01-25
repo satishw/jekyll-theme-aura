@@ -1,0 +1,57 @@
+<!-- begin testimonials -->
+<section class="section testimonials animate">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+
+        <div class="section__info">
+          <div class="section__head">
+            <h2 class="section__title">{{ site.data.settings.testimonials__title }}</h2>
+            <ul class="controls list-reset" id="customize-controls" aria-label="Slider Navigation" tabindex="0">
+              <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
+                <i class="ion ion-ios-arrow-back"></i>
+              </li>
+              <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
+                <i class="ion ion-ios-arrow-forward"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="section__description">{{ site.data.settings.testimonials__description_html }}</div>
+        </div>
+
+        <div class="testimonials__slider my-slider">
+          {% for testimonial-item in site.data.settings.testimonials %}
+            <!-- begin individual testimonial card -->
+            <div class="c-testimonial-card">
+              <div class="c-testimonial-card__content">
+                <div class="c-testimonial-card__client-meta">
+                  {% if testimonial-item.image %}
+                    <div class="c-testimonial-card__image-container">
+                      <img class="c-testimonial-card__client-avatar" src="{{ testimonial-item.image }}" alt="{{ testimonial-item.name }}">
+                    </div>
+                  {% endif %}
+                  <div class="c-testimonial-card__client-info">
+                    {% if testimonial-item.name %}
+                      <h3 class="c-testimonial-card__client-name">{{ testimonial-item.name }}</h3>
+                    {% endif %}
+                    {% if testimonial-item.position %}
+                      <p class="c-testimonial-card__client-position">{{ testimonial-item.position }}</p>
+                    {% endif %}
+                  </div>
+                  
+                </div>
+                {% if testimonial-item.blurb %}
+                  <p class="c-testimonial-card__client-text">{{ testimonial-item.blurb }}</p>
+                {% endif %}
+                
+              </div>
+            </div>
+            <!-- end individual testimonial card -->
+          {% endfor %}
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end testimonials -->

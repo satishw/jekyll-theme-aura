@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<div class="container">
+    <div class="c-page-heading">
+        <h1 class="c-page-heading__title">{{ page.title }}</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12">
+            <div class="c-page-image animate">
+                <img alt="{{ page.image-alt }}" 
+                     data-cms-original-src="{{ page.image }}" 
+                     loading="lazy" 
+                     src="{{ site.baseurl }}{{ page.image }}">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container animate">
+    <article class="post">
+      <div class="post__content">  
+
+        {% if page.toc == true %}
+        <div class="post__toc">
+          <h2 class="post__toc__title">Table of Contents</h2>
+          {% include toc.html html=content ordered=false class="post__toc__list" h_min=2 %}
+        </div>
+        {% endif %}
+                
+        {{ content }}
+      </div>
+    </article>
+</div>

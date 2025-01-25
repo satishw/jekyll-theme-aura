@@ -1,0 +1,53 @@
+<!-- begin hero -->
+<section class="c-hero animate">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="c-hero__inner">
+
+          <div class="c-hero__left">
+            <h1 class="c-hero__title">
+              {% if site.data.settings.hero__settings.title %}
+                {{ site.data.settings.hero__settings.title }}
+              {% else %}
+                Default Hero Title
+              {% endif %}
+            </h1>
+
+            <div class="c-hero__description">
+              {% if site.data.settings.hero__settings.description_html %}
+                {{ site.data.settings.hero__settings.description_html }}
+              {% else %}
+                <p>No description available.</p>
+              {% endif %}
+            </div>
+
+            <div class="c-hero__btn">
+              {% if site.data.settings.hero__settings.cta_button_link %}
+                <a href="{{ site.baseurl }}{{ site.data.settings.hero__settings.cta_button_link }}" class="cta-button c-button c-button--primary c-button--small">
+                  {{ site.data.settings.hero__settings.cta_button | default: "Call to Action" }}
+                </a>
+              {% endif %}
+
+              {% if site.data.settings.hero__settings.works_button_link %}
+                <a class="works-button c-button c-button--secondary c-button--small" href="{{ site.data.settings.hero__settings.works_button_link }}">
+                  <span class="circle-bg"><i class="ion ion-md-arrow-down button-arrow"></i></span>{{ site.data.settings.hero__settings.works_button | default: "Explore Works" }}
+                </a>
+              {% endif %}
+            </div>
+          </div>
+
+          <div class="c-hero__right">
+            {% if site.data.settings.hero__settings.image %}
+              <div class="c-hero__image">
+                <img loading="lazy" src="{{ site.baseurl }}{{ site.data.settings.hero__settings.image }}" alt="{{ site.data.settings.hero__settings.hero_image_alt }}">
+              </div>
+            {% endif %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end hero -->

@@ -1,0 +1,54 @@
+---
+layout: default
+---
+
+<div class="container">
+  
+  <div class="container">
+    <div class="c-page-heading">
+      <h1 class="c-page-heading__title">{{page.title}}</h1>
+      
+        <p class="c-page-heading__description">{{page.subtitle}}</p>
+      
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="c-page-image animate">
+          <img alt="" data-cms-original-src="{{page.image}}" loading="lazy" src="{{ site.baseurl }}{{page.image}}">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+<div class="container animate">
+    <article class="post">
+      <div class="post__content">  
+
+        {% if page.toc == true %}
+        <div class="post__toc">
+          <h2 class="post__toc__title">Table of Contents</h2>
+          {% include toc.html html=content ordered=false class="post__toc__list" h_min=2 %}
+        </div>
+        {% endif %}
+                
+        {{ content }}
+      </div>
+    </article>
+</div>
+
+  {% if page.previous.url %}
+  <div class="project__navigation animate">
+    <a class="project__prev" href="{{ site.baseurl }}{{page.previous.url}}">
+      <div class="project__box">
+        <span class="project__nav__info">Next Project</span>
+        <h2 class="project__nav__title">{{page.previous.title}}<i class="ion ion-md-arrow-round-forward arrow-right"></i></h2>
+      </div>
+    </a>
+  </div>
+  {% endif %}
+
+</div>

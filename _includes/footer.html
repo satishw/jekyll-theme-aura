@@ -1,0 +1,23 @@
+<!-- begin footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+
+        {% include social-links.html %}
+
+        <ul class="footer_nav list-reset">
+          {% for item in site.data.settings.footer_menu__settings.menu__items %}
+          <li class="footer_nav__item">
+            <a href="{{ item.url | relative_url }}" class="footer_nav__link">{{ item.title }}</a>
+          </li>
+          {% endfor %}
+        </ul>
+
+        <div class="copyright">{{site.time | date: '%Y'}} &copy; <a href="{{ site.url }}{{ site.baseurl }}/">{{site.data.settings.title}}</a>.</div>
+
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- end footer -->

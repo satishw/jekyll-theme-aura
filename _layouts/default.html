@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+    {% if site.data.settings.google-analytics %}
+        {% include google-analytics.html %}
+    {% endif %}
+
+      
+    {% include header.html %}
+
+    {{ content }}
+
+    <div class="top" title="Top"><i class="ion ion-ios-arrow-up"></i></div>
+
+    {% include footer.html %}
+
+    
+    <!-- Updated paths with baseurl -->
+    <script id="baseurl-script" data-baseurl="{{ site.baseurl }}"></script>     
+    <script src="{{ site.baseurl }}/assets/js/scripts.js"></script>
+    <script src="{{ site.baseurl }}/assets/js/common.js"></script>
+
+</body>
+</html>

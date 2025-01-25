@@ -1,0 +1,84 @@
+---
+layout: default
+---
+
+<div class="container">
+  <div class="c-page-heading">
+    <h1 class="c-page-heading__title">{{ site.data.settings.blog__settings.title_blog }}</h1>
+    
+      <p class="c-page-heading__description">{{ site.data.settings.blog__settings.description_html }}</p>
+    
+  </div>
+</div>
+
+<!-- begin blog -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="contaniner__inner animate">
+
+          <div class="row">
+            {% if site.posts.size > 0 %}
+              {% for post in paginator.posts offset:0 limit:6 %}
+                <!-- Begin Custom Blog Card -->
+                {% assign c = "c-blog-card" %}
+                <div class="{{c}} col col-4 col-d-6 col-t-12">
+                  <div class="{{c}}__inner">
+
+                    {% if post.image %}
+                    <div class="{{c}}__image-wrap">
+                      <a class="{{c}}__image" href="{{ post.url | relative_url }}">
+                        <img loading="lazy" src="{{ site.baseurl }}{{ post.image }}" alt="{{ post.title }}">
+                      </a>
+                    </div>
+                    {% endif %}
+
+                    <div class="{{c}}__content">
+
+                      {% if post.tags.size >= 1 %}
+                      <div class="{{c}}__tags-box">
+                        {% for tag in post.tags %}
+                        <a href="{{ site.baseurl }}/tags/?tag={{ tag | downcase }}" class="{{c}}__tag">{{ tag }}</a>
+                        {% endfor %}
+                      </div>
+                      {% endif %}
+
+                      <h2 class="{{c}}__title">
+                        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                      </h2>
+
+                      <p class="{{c}}__excerpt">
+                        {% if post.description %}{{ post.description }}{% else %}{{ post.content | strip_html | truncate: 120 }}{% endif %}
+                      </p>
+
+                      <div class="{{c}}__meta">
+                        <div class="{{c}}__author-image">
+                          <img loading="lazy" src="{{ site.baseurl }}{{ site.data.settings.author_image }}" alt="{{ site.data.settings.author_name }}">
+                        </div>
+                        <div class="{{c}}__info">
+                          <div class="{{c}}__author-name">{{ site.data.settings.author_name }}</div>
+                          <span class="{{c}}__date">
+                            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date_to_string }}</time>
+                          </span>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- End Custom Blog Card -->
+              {% endfor %}
+            {% else %}
+              <p>No posts available.</p>
+            {% endif %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- end blog -->
+
+{% include pagination.html %}

@@ -1,0 +1,121 @@
+# Site settings
+title: Aura
+logo_image:  # You can add own logo. For example '/images/logo.png'.
+description: Aura is a multipurpose Jekyll blog theme
+social_media_share_image: #'/images/01.jpg'
+disqus-identifier:
+google-analytics:
+
+# Author Settings
+author_name: Olivia Smith
+author_image: '/images/author.jpg'
+
+# header
+header_menu__settings:
+  menu__items:
+    - title: 'Home'
+      url: '/'
+    - title: 'Projects'
+      url: '/projects/'
+    - title: 'Blog'
+      url: '/blog/'
+    - title: 'Pages'
+      submenu:
+      - url: '/contact/'
+        title: 'Contact'
+      - url: '/ui-elements/'
+        title: 'UI Elements'
+    - url: '/about/'
+      title: 'About'
+    - url: 'https://satishw.github.io/jekyll-theme-aura-pro'
+      title: 'Aura Pro'
+
+# Footer 
+footer_menu__settings:
+  menu__items:
+    - title: 'Home'
+      url: '/'
+    - title: 'Projects'
+      url: '/projects/'
+    - title: 'UI Elements'
+      url: '/ui-elements/'
+    - title: 'About'
+      url: '/about/'
+    - title: 'Blog'
+      url: '/blog/'
+
+# Hero settings
+hero__settings:
+  title: Hey, I'm Olivia Smith
+  description_html: <strong>Small Business Owner</strong> and <strong>Retail Strategist</strong> based in Sunnyvale. I manage a local store offering curated products and personalized services, catering to a diverse community with a focus on quality, customer satisfaction, and unique shopping experiences.
+  image: /images/hero.jpg
+  image_alt: Olivia Smith's picture
+  cta_button: Get in touch
+  cta_button_link: "/contact"
+  works_button: See my works
+  works_button_link: "#projects"
+
+projects__settings:
+  title: Latest Works
+  title_myworks: My Works
+  description_html: My finest photography, shot with passion, simplicity, and creativity!
+  link_url: /projects
+
+blog__settings:
+  title: Recent Posts
+  title_blog: Blog
+  description_html: Aura theme comes with impressive features. Find out how to set up a successful blog!
+  link_url: /blog
+  
+
+testimonials__title: Testimonials 
+testimonials__description_html: "See what our satisfied customers have to say about their experience"
+
+testimonials:
+  - name: Sophia Ramirez
+    position: Software Developer
+    image: 'images/client-1.jpg'
+    blurb: This theme strikes the perfect balance between style and functionality, making it ideal for bloggers who want a professional and polished look.
+
+  - name: Michael Thompson
+    position: Digital Marketer
+    image: 'images/client-2.jpg'
+    blurb: The attention to detail in this theme is outstanding—it’s intuitive, visually stunning, and works flawlessly across all platforms!
+
+  - name: Daniel Carter
+    position: Graphic Designer
+    image: 'images/client-3.jpg'
+    blurb: The built-in features and smooth user experience make this theme stand out from the rest. It’s an absolute joy to work with!
+
+  - name: Emily Johnson
+    position: Freelance Writer
+    image: 'images/client-4.jpg'
+    blurb: I love how well-optimized this theme is for speed and SEO; my blog has never performed better!
+
+  - name: Jessica Bennett
+    position: Content Creator
+    image: 'images/client-5.jpg'
+    blurb: Elegant, modern, and highly customizable—this theme exceeded all my expectations for a Jekyll blog!
+
+
+newsletter__settings:
+  newsletter_title: Join my mailing list
+  newsletter_description: Get inspiration, updates and, cool stuff!
+  newsletter_identifier: https://gmail.us17.list-manage.com/subscribe/post?u=6ef2a4ea044e8d6950f7e49ea&amp;id=4e482bb41c&amp;f_id=0055eae3f0 # change this url, example url for sendy.co https://your-sendy-site.com/subscribe
+  newsletter_button: Subscribe
+
+contact_form__settings:
+  form_title: Get in touch
+  form_description: Aura comes with a built-in contact form.
+  form_button_text: Send now
+  form_action_url: https://formspree.io/f/abcd1234  # change this url 
+
+#-------------------------------
+# Social Links
+# Example of adding a new link to the footer - {icon: "ion-logo-facebook", link: "https://facebook.com"}
+# Other icons can be found at https://ionicons.com/v4/
+social_links:
+- {icon: "Twitter", link: "https://twitter.com"}
+- {icon: "Github", link: "https://github.com/satishw/jekyll-theme-aura"}
+- {icon: "Pinterest", link: "https://pinterest.com"}
+- {icon: "Youtube", link: "https://youtube.com"}

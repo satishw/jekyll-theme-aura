@@ -1,0 +1,47 @@
+<!-- begin projects -->
+<section class="section projects" id="projects">
+  <div class="container">
+    <div class="row">
+      <div class="col col-12">
+        <div class="container__inner animate">
+
+          <div class="section__info">
+            <div class="section__head">
+              <h2 class="section__title">{{ site.data.settings.projects__settings.title }}</h2>
+              <a class="section__link" href="{{ site.baseurl }}{{ site.data.settings.projects__settings.link_url }}">View all <i class="ion ion-md-arrow-forward"></i></a>
+            </div>
+            <div class="section__description">{{ site.data.settings.projects__settings.description_html }}</div>
+          </div>
+
+          <div class="row">
+            {% for project in site.projects %}
+              {% if forloop.index <= 6 %}
+                <!-- begin individual project card -->
+                <article class="c-project-card col col-4 col-d-6 col-t-12">
+                  <div class="c-project-card__content">
+                    <a href="{{ site.baseurl }}{{ project.url | default: '#' }}" class="c-project-card__image" aria-label="View project: {{ project.title }}">
+                      <img loading="lazy" src="{{ site.baseurl }}{{ project.image }}" alt="{{ project.title }}">
+                    </a>
+                    <div class="c-project-card__info">
+                      <div class="c-project-card__info-wrap">
+                        <h3 class="c-project-card__title">{{ project.title }}</h3>
+                      </div>
+                      <div class="c-project-card__info-wrap">
+                        {% if project.subtitle %}
+                        <div class="c-project-card__subtitle">{{ project.subtitle }}</div>
+                        {% endif %}
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <!-- end individual project card -->
+              {% endif %}
+            {% endfor %}
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end projects -->

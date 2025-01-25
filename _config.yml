@@ -1,0 +1,62 @@
+# General Site Settings
+baseurl: "/jekyll-theme-aura" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+
+markdown: kramdown
+permalink: /:title
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+
+paginate: 6
+paginate_path: "/blog/page/:num"
+
+collections_dir: 'docs'
+
+collections:
+  pages:
+    output: true
+    permalink: /:title/
+  projects:
+    output: true
+    permalink: /project/:slug
+  posts:
+    output: true
+    permalink: /blog/:slug
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      type: pages
+    values:
+      layout: page
+  - scope:
+      type: projects
+    values:
+      layout: project
+  - scope:
+      type: posts
+    values:
+      layout: post
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Exclude these files from production site
+exclude:
+  - CHANGELOG.md
+  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+  - .sass-cache
+  - .jekyll-cache
+  - .gitattributes
+  - .gitignore
+
+  

@@ -1,0 +1,24 @@
+---
+layout: null
+---
+[
+  {% for post in site.posts %}
+    {
+      "title"    : "{{ post.title | escape }}",
+      "tags"     : "{{ post.tags | array_to_sentence_string }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
+      "date"     : "{{ post.date | date_to_long_string }}",
+      "image"    : "{{ post.image }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+  ,
+  {% for project in site.projects %}
+    {
+      "title"    : "{{ project.title | escape }}",
+      "tags"     : "{{ project.tags | array_to_sentence_string }}",
+      "url"      : "{{ site.baseurl }}{{ project.url }}",
+      "date"     : "{{ project.date | date_to_long_string }}",
+      "image"    : "{{ project.image }}"
+    } {% unless forloop.last %},{% endunless %}
+  {% endfor %}
+]

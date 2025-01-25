@@ -1,0 +1,27 @@
+## v1.0.0 (2025-01-24)
+- Forked from Vonge theme, modified to work with github pages
+- Fixed many issues
+- Redesigned page, post and project layouts
+- Responsive design
+- Blog section
+- Projects Section
+- Testimonials section 
+- Tag pages
+- Scroll to top button
+- Search
+- Color Infoboxes
+- Table of Content
+- FAQ on any post or page
+- Code highlight
+- Image gallery
+- Image lazy loading
+- Embed Youtube videos
+- Social sharing
+- Logo support
+- Supports contact form (Formspree)
+- Supports MailChimp newsletter
+- Supports Disqus comments
+- Supports Google Analytics
+- Optimized for mobile devices
+- Compatible with modern browsers
+- Code cleanup

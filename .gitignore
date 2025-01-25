@@ -1,0 +1,11 @@
+# project
+_site
+.sass-cache
+.jekyll-cache
+
+# general
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+
