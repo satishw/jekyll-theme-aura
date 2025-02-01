@@ -4,7 +4,7 @@ logo_image:  # You can add own logo. For example '/images/logo.png'.
 description: Aura is a multipurpose Jekyll blog theme
 social_media_share_image: #'/images/01.jpg'
 disqus-identifier:
-google-analytics:
+google-analytics: G-XLEGE1T4XZ
 
 # Author Settings
 author_name: Olivia Smith
